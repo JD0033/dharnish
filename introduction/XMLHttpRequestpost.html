@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>XML Http request</h2>
+    <button type="button" onclick="loadDoc()">Request data</button>
+    <p id="sap1"></p>
+    <script>
+        function loadDoc() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                document.getElementById("sap1").innerHTML = this.responseText;
+            }
+            xhttp.open("POST", "Destructring.js");
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>

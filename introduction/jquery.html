@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function(){
+                // $("p").hide();
+                $("a[target!='_blank']").hide();
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- <p>Lorem, ipsum.</p>
+    <p>Lorem ipsum dolor sit amet.</p> -->
+    <p><a href="https://www.java.com/en/" target="_blank">java</a></p>
+    <p><a href="https://en.wikipedia.org/wiki/UEFA_Euro_2024" target="_blank">euro</a></p>
+    <p><a href="https://www.instagram.com/433/">433</a></p>
+    <button>click to hide data</button>
+</body>
+</html>

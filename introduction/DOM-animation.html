@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            height: 500px;
+            width: 500px;
+            position: relative;
+            background-color:cyan;
+        }
+
+        #animation{
+            height: 30px;
+            width: 30px;
+            position: absolute;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="boxMove()">Click here</button>
+    <div id="container"></div>
+    <div id="animation"></div>
+    <script>
+        function boxMove() {
+            let id = null;
+            const elem = document.getElementById("animation");
+            let pos = 0;
+            clearInterval(id);
+            id = setInterval(frame, 5);
+            function frame() {
+                if(pos ==450) {
+                    clearInterval(id)
+                }else{
+                    pos++;
+                    elem.style.top = pos + 'px';
+                    elem.style.left = pos + 'px';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
